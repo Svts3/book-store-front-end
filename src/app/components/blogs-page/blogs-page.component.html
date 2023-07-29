@@ -1,0 +1,13 @@
+<div class="container">
+    <h1 class="page-title">Blogs</h1>
+    <button class="write-blog-button" *ngIf="userIsLoggedIn()==true" routerLink="/write-blog">Write a blog</button>
+    <div class="blog" *ngFor="let blog of blogs">
+      <h2>{{blog.title}}</h2>
+      <p>Author: {{blog.authorName}}</p>
+      <p>Date: {{blog.creationDate | date:'dd/MM/yyyy'}}</p>
+      <p>{{blog.content}}</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+  
+  </div>
+  

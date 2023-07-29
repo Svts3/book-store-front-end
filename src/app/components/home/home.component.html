@@ -1,0 +1,16 @@
+<h1 class="page-title">The New Books</h1>
+
+    <div class="container">
+        <div class="book-block" *ngFor="let book of books">
+            <div class="book-image">
+                <img src="assets/{{book.imageSource}}" alt="Book 1">
+            </div>
+            <div class="book-details">
+                <h2 class="book-title">{{book.title}}</h2>
+                <p class="book-description">{{book.description}}</p>
+                <p class="book-author">Author: {{book.authorName}}</p>
+                <p class="book-price">Price: {{book.price}}</p>
+                <a class="details-button" [routerLink]="['/book-info/',book.id]">Details</a>
+            </div>
+        </div>
+    </div>

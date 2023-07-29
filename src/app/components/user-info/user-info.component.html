@@ -1,0 +1,37 @@
+<div class="container">
+  <h2>User Information</h2>
+  <div class="info-container">
+    <label>First Name:</label>
+    <span>{{ firstName }}</span>
+    <button (click)="editFirstName()">Edit</button>
+  </div>
+  <div class="info-container">
+    <label>Last Name:</label>
+    <span>{{ lastName }}</span>
+    <button (click)="editLastName()">Edit</button>
+  </div>
+  <div class="info-container">
+    <label>Email:</label>
+    <span>{{ email }}</span>
+    <button (click)="editEmail()">Edit</button>
+  </div>
+
+  <h2>User's Books</h2>
+  <div class="book-container">
+   
+    <div class="book" *ngFor="let book of books">
+      <h3><a [routerLink]="['/book-info', book.id]">{{ book.title }}</a></h3>
+      <p><strong>Author:</strong> {{ book.authorName }}</p>
+    </div>
+  </div>
+
+  <h2>User's Reviews</h2>
+  <div class="review-container">
+    <div class="review" *ngFor="let review of reviews">
+      <h3>Title: {{ review.book }}</h3>
+      <p>{{ review.content }}</p>
+    </div>
+  </div>
+
+  <button (click)="logout()">Logout</button>
+</div>

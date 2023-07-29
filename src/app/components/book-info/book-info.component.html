@@ -1,0 +1,22 @@
+  <div class="container" *ngIf="book">
+    <img class="book-image" src="assets/{{book.imageSource}}" alt="Book Image">
+    <div class="details">
+      <h2>{{book.title}}</h2>
+      <p class="description">{{book.description}}</p>
+      <p class="author">Author: {{book.authorName}}</p>
+      <p class="genre">Genre: {{book.genre}}</p>
+      <p class="average-rate">Rating: {{averageRate}}</p>
+      <p class="price">Price: ${{book.price}}</p>
+      <button class="add-to-cart" (click)="addToCart(book)" routerLink="/cart/">Add to Cart</button>
+      <button class="add-to-favourite" (click)="addToFavourite(book)" routerLink="/favourite">Add to Favourite</button>
+      <button class="write-review" routerLink="/write-review/{{book.id}}">Write a Review</button>
+      <h3>Reviews</h3>
+      <div class="reviews-block" *ngIf="hasReviews()">
+        <div class="review" *ngFor="let review of reviews">
+          <p>{{review.content}}</p>
+          <h4>Rate: {{review.rate}}/5</h4>
+          <h3>Author: {{review.user}}</h3>
+        </div>
+      </div>
+      <p class="no-reviews-message" *ngIf="!hasReviews()">No reviews yet</p>
+    </div>

@@ -1,0 +1,7 @@
+<div class="blog-container">
+    <h1 class="blog-title">Write Your Blog</h1>
+    <input class="blog-title-input" [(ngModel)]="blogTitle" placeholder="Enter blog title...">
+    <textarea class="blog-textarea" [(ngModel)]="blogContent" placeholder="Start writing your blog here..."></textarea>
+    <button class="submit-button" (click)="submitBlog()" routerLink="/blogs">Submit</button>
+  </div>
+  

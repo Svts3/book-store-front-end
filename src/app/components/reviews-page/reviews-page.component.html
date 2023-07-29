@@ -1,0 +1,14 @@
+<div class="container">
+    <h1 class="page-title">Reviews</h1>
+    <div class="reviews" *ngFor="let review of reviews">
+      <!-- Review records -->
+      <div class="review">
+        <h3 >{{review.book}}</h3>
+        <p>Author: {{review.user}}</p>
+        <p>Rating: {{review.rate}}</p>
+        <p>{{review.content}}</p>
+      </div>
+     
+    </div>
+  </div>
+  

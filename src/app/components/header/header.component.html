@@ -1,0 +1,15 @@
+<header>
+    <div class="catalogue-button-div">
+      <button routerLink="/catalogue">Catalogue</button>
+    </div>
+    <div class="header-search-bar">
+      <input type="search">
+      <button>Search</button>
+    </div>
+    <div class="header-buttons">
+      <button *ngIf="isLoggedIn"><img routerLink="/cart" src="../../../assets/cart.png"></button>
+      <button *ngIf="isLoggedIn"><img routerLink="/favourite" src="../../../assets/heart.png"></button>
+      <button *ngIf="!isLoggedIn" routerLink="/sign-in"><img src="../../../assets/customer.png"></button>
+      <button *ngIf="isLoggedIn" routerLink="/user-info"><img src="../../../assets/customer.png"></button>
+    </div>
+  </header>

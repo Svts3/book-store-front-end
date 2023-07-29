@@ -1,0 +1,11 @@
+<div class="favorite-books">
+  <h1 class="favorite-books-title">My Favorite Books</h1>
+  <div class="books">
+    <div class="book" *ngFor="let book of favouriteBooks">
+      <img src="assets/{{book.imageSource}}" alt="Book Image">
+      <h3>{{book.title}}</h3>
+      <p>Price: {{book.price}}</p>
+      <button [routerLink]="['/book-info/',book.id]">Details</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+    <h1 class="page-title">Top Books</h1>
+    <div class="books" *ngFor="let book of topBooks">
+      <div class="book">
+        <img src="assets/{{book.imageSource}}">
+        <h3>{{book.title}}</h3>
+        <p>Author:{{book.authorName}}</p>
+        <button [routerLink]="['/book-info', book.id]">Details</button>
+      </div>
+    </div>
+  </div>

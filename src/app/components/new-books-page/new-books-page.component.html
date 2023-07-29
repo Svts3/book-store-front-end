@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="books" *ngFor="let book of newBooks">
+      <div class="book">
+        <img src="assets/{{book.imageSource}}">
+        <h3>{{book.title}}</h3>
+        <p>Price: ${{book.price}}</p>
+        <button [routerLink]="['/book-info/',book.id]">Details</button>
+      </div>
+    </div>
+  </div>

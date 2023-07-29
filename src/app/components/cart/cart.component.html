@@ -1,0 +1,21 @@
+<div class="cart-page">
+  <h1 class="cart-title">Shopping Cart</h1>
+  <div class="cart-items">
+    <div class="cart-item" *ngFor="let cartItem of cartItems">
+      <img src="assets/{{cartItem.book.imageSource}}" alt="Book Image">
+      <div class="item-details">
+        <h3>{{ cartItem.book.title }}</h3>
+        <p>{{ cartItem.book.price * cartItem.quantity }}$/mo</p>
+        <input type="number" [(ngModel)]="cartItem.quantity" (change)="updateQuantity(cartItem)">
+      </div>
+      <button class="remove-button" (click)="removeItem(cartItem.bookId)">Remove</button>
+    </div>
+  </div>
+  <div class="cart-empty-message" *ngIf="cartItems.length === 0">
+    <p>The cart is empty</p>
+  </div>
+  <div class="total">
+    <p>Total: ${{ totalPrice }}</p>
+    <button class="checkout-button" (click)="checkout()" routerLink="/user-info">Checkout</button>
+  </div>
+</div>

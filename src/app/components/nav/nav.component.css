@@ -1,0 +1,21 @@
+.nav-div{
+    width: 100%;
+    height: 65px;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+   
+}
+.nav-div > *{
+    color: white;;
+}
+.nav-div button{
+    width: 120px;
+    background-color: grey;
+    border: none;
+    border: 2px solid grey;
+}
+.nav-div button:hover{
+    border: 2px solid white;
+    transition: 0.3s;
+}

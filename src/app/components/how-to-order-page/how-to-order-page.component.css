@@ -1,0 +1,16 @@
+/* How to Order Page */
+.container {
+    max-width: 1200px;
+    min-height: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .page-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Add any additional styling specific to the How to Order page */
+  

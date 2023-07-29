@@ -1,0 +1,18 @@
+<form [formGroup]="bookReviewForm" (ngSubmit)="submitReview()">
+  <input type="text" id="bookTitle" name="bookTitle" [value]="formData.bookTitle" readonly>
+
+  <label for="review">Your Review:</label>
+  <textarea id="review" formControlName="review" rows="5" required></textarea>
+
+  <label for="rating">Rating:</label>
+  <select id="rating" formControlName="rating" required>
+    <option value="">Select Rating</option>
+    <option value="1">1 - Poor</option>
+    <option value="2">2 - Fair</option>
+    <option value="3">3 - Good</option>
+    <option value="4">4 - Very Good</option>
+    <option value="5">5 - Excellent</option>
+  </select>
+
+  <button type="submit" [disabled]="!bookReviewForm.valid">Submit Review</button>
+</form>
